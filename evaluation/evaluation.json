@@ -1,0 +1,86 @@
+{
+  "dataset_rows": 4391,
+  "feature_columns": [
+    "word_count",
+    "sentence_count",
+    "unique_word_count",
+    "lexical_diversity",
+    "instruction_density",
+    "obfuscation_score",
+    "instruction_override",
+    "system_prompt_reference",
+    "role_change_attempt",
+    "data_extraction_attempt",
+    "tool_manipulation",
+    "policy_bypass",
+    "prompt_leakage",
+    "sensitive_data_reference",
+    "imperative_signal"
+  ],
+  "embedding_dimensions": 384,
+  "vector_dimensions": 399,
+  "split_strategy": "GroupShuffleSplit using group_id",
+  "split_sizes": {
+    "train": 3073,
+    "validation": 659,
+    "test": 659
+  },
+  "test_metrics": {
+    "accuracy": 0.9514415781487102,
+    "precision_malicious": 0.9727047146401985,
+    "recall_malicious": 0.9491525423728814,
+    "f1_malicious": 0.9607843137254902,
+    "roc_auc": 0.9882084292997894,
+    "confusion_matrix_labels_0_1": [
+      [
+        235,
+        11
+      ],
+      [
+        21,
+        392
+      ]
+    ],
+    "classification_report": {
+      "benign": {
+        "precision": 0.91796875,
+        "recall": 0.9552845528455285,
+        "f1-score": 0.9362549800796812,
+        "support": 246.0
+      },
+      "malicious": {
+        "precision": 0.9727047146401985,
+        "recall": 0.9491525423728814,
+        "f1-score": 0.9607843137254902,
+        "support": 413.0
+      },
+      "accuracy": 0.9514415781487102,
+      "macro avg": {
+        "precision": 0.9453367323200992,
+        "recall": 0.9522185476092049,
+        "f1-score": 0.9485196469025857,
+        "support": 659.0
+      },
+      "weighted avg": {
+        "precision": 0.9522721694179088,
+        "recall": 0.9514415781487102,
+        "f1-score": 0.9516276884191639,
+        "support": 659.0
+      }
+    },
+    "false_positive_rate": 0.044715447154471545,
+    "false_negative_rate": 0.05084745762711865
+  },
+  "validation_metrics_at_threshold_0_5": {
+    "accuracy": 0.9332321699544764,
+    "precision_malicious": 0.9537275064267352,
+    "recall_malicious": 0.9345088161209067,
+    "f1_malicious": 0.9440203562340967
+  },
+  "notes": [
+    "This is a baseline model and one held-out split, not a guarantee of real-world performance.",
+    "Fusion weights and severity thresholds are heuristics, not calibrated probabilities.",
+    "Embeddings are used as input features; centroids are trained using training data only."
+  ],
+  "sklearn_version": "1.9.0"
+}

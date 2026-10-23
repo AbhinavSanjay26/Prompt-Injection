@@ -1,0 +1,70 @@
+{
+  "direct_prompt_injection": {
+    "display_name": "Direct Prompt Injection",
+    "description": "The prompt appears to attempt to override the model's prior instructions.",
+    "indicators": [
+      "instruction_override"
+    ],
+    "supporting_indicators": [
+      "imperative_signal",
+      "policy_bypass",
+      "role_change_attempt"
+    ]
+  },
+  "system_prompt_extraction": {
+    "display_name": "System Prompt Extraction",
+    "description": "The prompt appears to request hidden system instructions or prompt content.",
+    "indicators": [
+      "system_prompt_reference",
+      "data_extraction_attempt"
+    ],
+    "supporting_indicators": [
+      "prompt_leakage",
+      "sensitive_data_reference"
+    ]
+  },
+  "role_manipulation": {
+    "display_name": "Role Manipulation",
+    "description": "The prompt appears to assign a new identity, role, or unrestricted mode.",
+    "indicators": [
+      "role_change_attempt"
+    ],
+    "supporting_indicators": [
+      "instruction_override",
+      "policy_bypass"
+    ]
+  },
+  "tool_manipulation": {
+    "display_name": "Tool Manipulation",
+    "description": "The prompt appears to request potentially unsafe tool or action use.",
+    "indicators": [
+      "tool_manipulation"
+    ],
+    "supporting_indicators": [
+      "data_extraction_attempt",
+      "sensitive_data_reference"
+    ]
+  },
+  "obfuscated_injection": {
+    "display_name": "Obfuscated Injection",
+    "description": "The prompt contains obfuscation signals that may conceal suspicious instructions.",
+    "indicators": [
+      "obfuscation_score"
+    ],
+    "supporting_indicators": [
+      "instruction_override",
+      "policy_bypass"
+    ]
+  },
+  "policy_bypass": {
+    "display_name": "Policy Bypass Attempt",
+    "description": "The prompt appears to ask for bypassing or disabling safeguards.",
+    "indicators": [
+      "policy_bypass"
+    ],
+    "supporting_indicators": [
+      "instruction_override",
+      "role_change_attempt"
+    ]
+  }
+}
